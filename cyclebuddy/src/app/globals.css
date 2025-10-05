@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
     margin: 0;
     padding: 0;
@@ -153,6 +157,8 @@ body {
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex-wrap: wrap;
+    min-width: 0;
 }
 
 .wallet-address {
@@ -163,6 +169,10 @@ body {
     font-size: 0.9rem;
     color: #666;
     border: 1px solid #e2e8f0;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: unset;
+    min-width: fit-content;
 }
 
 .disconnect-btn {
@@ -1534,6 +1544,10 @@ body {
     border-radius: 20px;
     font-family: monospace;
     font-size: 12px;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: unset;
+    min-width: fit-content;
     color: #666;
     margin-bottom: 12px;
     display: inline-block;

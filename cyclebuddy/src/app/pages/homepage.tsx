@@ -357,6 +357,10 @@ const Dashboard = (): ReactElement => {
     }, [account]);
 
     const formatAddress = (address: string) => {
+        // Show more characters for longer addresses to prevent truncation
+        if (address.length > 20) {
+            return `${address.slice(0, 10)}...${address.slice(-6)}`;
+        }
         return `${address.slice(0, 6)}...${address.slice(-4)}`;
     };
 

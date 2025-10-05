@@ -13,6 +13,15 @@ const nextConfig = {
         // your project has ESLint errors.
         ignoreDuringBuilds: true,
     },
+    webpack: (config, { isServer }) => {
+        if (!isServer) {
+            config.resolve.alias = {
+                ...config.resolve.alias,
+                'pino-pretty': false,
+            };
+        }
+        return config;
+    },
 };
 
 module.exports = nextConfig;
