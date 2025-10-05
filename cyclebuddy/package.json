@@ -1,0 +1,36 @@
+{
+    "name": "sample-next-app",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "build": "next build",
+        "clean": "rm -rf .next dist .turbo",
+        "dev": "next dev",
+        "gh-pages-build": "BASE_PATH='/vechain-dapp-kit/next' next build",
+        "preview": "npx serve -p 5002 dist",
+        "purge": "yarn clean; rm -rf node_modules"
+    },
+    "dependencies": {
+        "@headlessui/react": "^2.2.9",
+        "@vechain/dapp-kit": "^2.0.4",
+        "@vechain/dapp-kit-react": "^2.0.4",
+        "@vechain/dapp-kit-ui": "^2.0.4",
+        "date-fns": "^4.1.0",
+        "framer-motion": "^12.23.22",
+        "lucide-react": "^0.544.0",
+        "next": "^15.2.4",
+        "react": "^19.1.0",
+        "react-dom": "^19.1.0",
+        "react-hook-form": "^7.64.0",
+        "recharts": "^3.2.1"
+    },
+    "devDependencies": {
+        "@next/eslint-plugin-next": "^14.2.27",
+        "@types/node": "^22.14.0",
+        "@types/react": "^19.1.0",
+        "@types/react-dom": "^19.1.1",
+        "eslint": "^9.24.0",
+        "eslint-config-next": "15.2.4",
+        "typescript": "5.8.3"
+    }
+}
